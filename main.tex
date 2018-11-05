@@ -1,0 +1,646 @@
+\documentclass[14pt,a4paper,final]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{graphicx}
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=2.5cm]{geometry}
+\linespread{1.2}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{soul}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{array, xcolor, lipsum, bibentry,fancyhdr}
+\usepackage[margin=3cm]{geometry}
+
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+\let\cleardoublepage\clearpage
+%to remove the dots for the content page.
+\makeatletter
+\renewcommand{\@dotsep}{10000} 
+\makeatother
+\makeatletter 
+%\renewcommand{\thefigure}{\@arabic\c@figure}
+\makeatother
+
+
+
+
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
+\newcolumntype{R}{p{0.8\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+%....................................
+%....................................
+%change this portion in ur tex file. copy this and paste there.
+%....................................
+%....................................
+
+\titleformat{\chapter}[display]
+{\normalfont\rmfamily\medium\bfseries\color{black}}
+{\chaptertitlename\ \thechapter}{13pt}{\LARGE}
+ 
+\titlespacing {\chapter}{0pc}{0pc}{.1pc}
+%\titlespacing{<command>}{<left>}{<before-sep>}{<aft
+
+\titlespacing{\section}{0pc}{.5pc}{0pc}
+\titlespacing{\subsection}{0pc}{1pc}{0pc}
+
+
+%........................................
+%........................................
+%thank u
+%........................................
+%........................................
+
+\author{{{by}}\\
+\textbf{VIVEK E }\\
+	(Roll No:31)\\[2pt]
+ }
+\title{{\large\textbf{AMMINI COLLEGE OF ENGINEERING PALAKKAD}} \\
+\begin{figure}[h]
+	\begin{center}
+\includegraphics[scale=.6]{images.jpg} \\[.1cm]
+\end{center}
+\end{figure}
+{\large\textbf{SEVENTH SEMESTER B.TECH\\[.5 cm]}}
+	{\large\textbf{SEMINAR REPORT\\[.5 cm]}}
+	{\large \textbf{ON\\[.2 cm]}}
+	{\large \textbf {PROGRESSIVE WEB APPS}}
+		}
+\date{
+\textit{under the guidance of} \\[0.2cm]
+	\textbf{ Mr. Sudhesh K.M} \\
+	\textbf{Assistant Professor}\\
+	\vspace{.1cm}
+	\large\textbf{Department of Computer Science and Engineering} \\
+}	
+\thispagestyle{empty}
+
+\begin{document}
+\pagenumbering{gobble}
+\clearpage\maketitle
+\thispagestyle{empty}
+
+
+\begin{center}\fontsize{17}{17} \selectfont \textbf{AMMINI COLLEGE OF ENGINEERING PALAKKAD}\end{center}
+%\begin{center}\fontsize{14}{17} \selectfont \textbf{PALAKKAD}\end{center}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images.jpg}
+		\vspace{.1 cm}
+	\end{center}
+\end{figure}
+\begin{center}\fontsize{17}{17} \selectfont \textbf{\large Department of Computer Science \& Engineering\\[2cm] }\end{center}
+\begin{center}
+\emph{\textcolor{red}{\Large \bf CERTIFICATE}}
+\end{center}
+{This is to certify that the seminar report entitled {\bf{PROGRESSIVE WEB APPS}} submitted by {\bf VIVEK E}, to the {\bf Department of Computer Science and Engineering, Ammini College of Engineering, Palakkad -678613}, in partial fulfilment of the requirement for the award of B.Tech Degree in Computer Science and Engineering is a bonafide record of the work carried out by him.}
+\newline
+\newline
+\newline
+\newline
+  \hspace{1cm}Mr Sudhesh K M\hspace{8.7cm}Mr Prabhu M
+\newline
+Co-ordinator \& Guide\hspace{6.75cm} Head Of Department
+\newline
+\newline
+Place$:$\hspace{.5cm}Palakkad 
+\newline
+\renewcommand{\dateseparator}{-}
+Date$:$\hspace{.5cm}\date{25-10-2019}%13-09-2010
+\newline
+
+
+%\thispagestyle{empty}
+
+\newpage
+\section*{\begin{center} \fontsize{14}{17} \selectfont \textbf{Acknowledgement}\end{center}}
+\thispagestyle{empty}
+%\vspace{1cm}
+
+%\vspace{.4 cm }
+%\begin{quote}
+{                                                 
+	\hspace{01.5cm}It is with great enthusiasm and learning spirit that I am bringing out this seminar report. Here I would like to mark my token of gratitude to all those who influenced me during the period of my work. I would like to express my sincere thanks to \textbf{The Management of Ammini College of Engineering, Palakkad} and \textbf{Dr.Suresh Kumar V }, The Principal Ammini College of Engineering for the facilities provided here.
+\par
+	\hspace{01.5cm}I express my heart-felt gratitude to Head of the Department, \textbf{Mr. Prabhu M} , Assistant Professor Department of Computer Science \& Engineering for allowing me to take up this work.
+\par	
+	\hspace{01.5cm}With immense pleasure I express sincere thanks to my guide and   Co-Ordinator \textbf{Mr. Sudhesh K.M} , Assistant Professor for his committed guidance, valuable suggestions and constructive criticisms. His stimulating suggestions and encouragement helped me through my seminar work. I extend my gratitude to all teachers in the Department of Computer Science and Engineering, Ammini College of Engineering, Palakkad for their support and inspiration.
+\par
+	\hspace{01.5cm}And above all I praise and thank the Almighty God, who showered His abundant grace on me to make this seminar a success. I also express my special thanks and gratitude to my family and all my friends for their support and encouragement.
+}
+%\end{quote}
+%header footer....
+\pagestyle{fancy}
+\lfoot{{\tiny AMMINI COLLEGE OF ENGINEERING}}
+\chead{}
+\rfoot{\tiny{DEPT OF CSE}}
+\rhead{\tiny \thepage}
+\cfoot{}
+\lhead{\tiny{ANIMAL COLLISION DETECTION USING CV}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.6pt}
+\newpage
+\textbf{
+\begin{center}
+\abstractname{}
+\thispagestyle{empty}
+\end{center}}
+The mobile apps have been reaching a huge success on the mobile market. This
+opportunity attracted a lot of interested companies to have their own optimized mobile
+apps for all major mobile operation systems. However, these developments are expensive
+when developed natively for each mobile platform. New improvements done on the web
+technologies, allowed more features and capabilities than previously was only possible on
+apps that was developed natively. This started new possibilities on consolidate all
+developments only on web apps, that are apps that runs on web browsers. Progressive
+apps load quickly even on slow network connections, send push notifications, and have a
+splash screen and an icon on the home screen. When launched from the home screen,
+these apps blend into the environment; they’re top-level, full-screen, and work offline.
+Progressive web apps are an interesting forward look into the future of mobile apps.
+
+ 
+
+
+
+
+\tableofcontents % compile 2 times to get table of contents written
+\addtocontents{toc}{\small}
+
+
+\listoffigures  %compile 2 times to get list of figures written
+\addtocontents{lof}{\small}
+
+
+\clearpage
+\pagenumbering{arabic}
+\chapter{Introduction}
+A progressive web app combines the best experiences of the web and an app. They don't require any installation. The word 'progressive' comes from the relationship that the user builds with the app over time. The app loads quickly, even when the user is on bad networks. It can send relevant push notifications to the user and has an icon on the home screen and loads as top-level, full screen experience.
+
+\item Google states: “A Progressive Web App uses modern web capabilities to deliver an app-like user experience.” When you will get to know PWA, app development will seem not required. The mobile website itself becomes the application.So, investing in Web Technologies is an omen because it is trying to overcome the major problem possessed by mobile apps: Platform Fragmentation.
+\item The mobile web is based on web apps conforming to
+standard languages like HTML5, CSS3, and JavaScript, which offer (among many) the advantage of full application portabil-
+ity across platforms (e.g. Android, Apple). Even if the browser is becoming more and more a fully-fledged software platform
+(e.g. the HTML5 standard provides APIs for geolocation,
+accessing the camera, microphone), as of today the mobile web
+struggles in providing a satisfactory experience to the user,
+mainly due to the strong dependence on network conditions,
+the lack of support for push notifications, and so on.
+
+\newpage
+
+\item In September 2015, research firm comScore released an extraordinary survey about how people actually use websites and apps. From an engagement perspective, the Web is a mile wide and an inch deep. Apps are the opposite, an inch wide and a mile deep. Apps are fast and the mobile websites are slow.
+\newline
+\newline
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/1.jpg}
+		\vspace{.1 cm}
+    \caption[Influences on road traffic accidents]{Influences on road traffic accidents}
+	\end{center}
+\end{figure}
+
+
+\begin{enumerate}
+\end{enumerate}
+
+
+
+\chapter{Literature Survey}
+\item   According to the report given by the Society for Prevention of Cruelty to Animals (SPCA), around 270 cattle had been brought to their hospital-cum-animal-shelter in the year 2013, most of whom were accident victims. 
+
+\item A recent study  shown that human beings have to take the final call while driving whether they can control their car to prevent collision with a response time of 150ms or no. The issue with the above approach is that human eyes get exhausted quickly and need rest, which is why this method is not that effective. Some scientific researchers have proposed a method that requires the animals to take a pose towards the camera for the trigger, including face detection. The problem with this technique is that face detection requires animals to see into the camera which is, not necessarily captured by the road travel video. Animals can arrive from a scene from various directions and in different sizes, poses, and color.
+
+\item Animals can be detected using the knowledge of their motion. The fundamental assumption here is that the default location is static and can simply be subtracted. All blobs, which stay after the operation are measured as the region of interest. Although this technique performs well in controlled areas, e.g. underwater videos, it does not work universally, especially road or highway side videos. Researchers used threshold segmentation approach for getting the targeted animal’s details from the background. Recent researches also revealed that it ’s hard to decide the threshold value as the background changes often. A method applicable to moving backgrounds (e.g., due to camera motion) is presented in subsequent studies. The authors also state that other moving objects apart from the object of interest may be falsely detected as an animal.
+
+\newpage \item Another method for animal detection and tracking that uses texture descriptor based on SIFT and matching it against a predefined library of animal textures is proposed. The problem with this method is that it is restricted to videos having single animal only and very minimal background clutter.
+
+ 
+\item Authors in designed a system, which uses web cameras which are placed in the detecting areas from where the animal can cross their boundary. The videos are sent to the processing unit and then uses image mining algorithm, which identifies the change in set reference background. If there is a change in the newly acquired image, then authors are applying content-based retrieval algorithm (CBIR) to identify the animal. The proposed method in based on CBIR algorithm suffers from many issues like unsatisfactory querying performance-CBIR systems use distance functions to calculate the dissimilarity between a search image and database images, low-quality recovery results. This approach is very slow and response times in the range of minutes may take place if the database is enormous.To find the accurate location of fishes in the marine, researchers aimed a technique using LIDAR (Light Detection and Ranging)
+ 
+
+\chapter{Research Gap and Challenges}
+ 
+\item Though various practical solutions for automatic lane detection and pedestrian detection on highways are available still research related to automatic animal detection on highways is going on.
+
+\item Animal detection in wildlife (forest) videos or underwater videos (controlled areas) have been tried in past but the challenges are much more when detecting animals on highways (uncontrolled areas) as both animal as well as a camera mounted vehicle is moving apart from other obstacles on the road which are also moving or stationary. There is no issue of speed (vehicle speed as well as animal speed) and detecting distance of animal from the vehicle in wildlife videos which is crucial and critical in animal detection on highways.
+
+\item The biggest challenge in detecting animals compared to pedestrians or other objects is that animals come in various size, shape, pose, color and their behavior is also not entirely predictable. Though the basic shape and size of a human being are pretty average and standard, the same is not true for animals.
+
+\item Although various methods and approaches have been used and are still in progress to detect, solve and reduce the number of animal-vehicle collisions, the absence of any practical systems related to an animal-vehicle collision on highways has delayed any substantial development in the scenario [24].
+
+\chapter{Different Scenarios and Consequences of Animal-Vehicle Collision on Highway}
+\item Animal-vehicle collision can be classified using two ways:
+\newline 1) Direct collision
+\newline 2) Indirect collision
+
+\item \textbf{Direct collision}: It happens when the vehicle directly hits the animal. Following cases and outcome may occur depending on the speed of the vehicle and the speed of the incoming or outgoing animal.
+
+\item Vehicle hits the animal and animal gets thrown to the side. This scenario may be less critical, but damages will be there. Figure 4.1 shows the case 1 scenario.
+
+\item Vehicle hits the animal, and the animal jumps/ gets raised in the air and again gets back or falls back on the windshield. This is quite critical and dangerous scenario and can cause the death of the animal or even the driver of the vehicle. Figure 4.2 shows the case 2 scenarios.
+
+\item Vehicle hits the animal and runs over the animal. In this case, a particular injury will occur to the animal. It may also happen that because of the impact of a collision, the vehicle may get overturn which can cause injury to the driver. Figure 4.3 shows the case 3 scenarios.
+\item \textbf{Indirect collision}: In this case, an accident occurs because of animal only but not directly. The driver of one vehicle finds an animal on the highway and tries to change the direction or the lane and collides with the vehicle which is running on the other lane. Figure 4.4 shows the indirect collision scenario.
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/2.jpeg}
+		\vspace{.1 cm}
+		\caption[Case 1 scenario]{Case 1 scenario}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/3.jpeg}
+		\vspace{.1 cm}
+		\caption[Case 2 scenario ]{Case 2 scenario}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/4.jpeg}
+		\vspace{.1 cm}
+		\caption[Case 3 scenario]{Case 3 scenario}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/5.jpeg}
+		\vspace{.1 cm}
+		\caption[Indirect collision]{Indirect collision}
+	\end{center}
+\end{figure}
+
+
+\chapter{Objectives and Scope of Work}
+\item Intelligent highway safety and driver assistance systems are very helpful to reduce the number of accidents that are happening due to vehicle-animal collisions. On Indian roads, two types of animals – the cow and the dog are found more often than other animals on the road. The primary focus of the proposed work is for detection of animals on roads which can have the potential application of preventing an animal-vehicle collision on highways. \item Specific objectives of the research work are:
+
+\item 1) To develop a low-cost automatic animal detection system in context to Indian roads.
+
+\item 2) Finding the approximate distance of animal from the vehicle in which camera is mounted.
+
+\item 3) To develop an alert system once the animal gets detected on the road which may help the driver in applying brakes or taking other necessary action for avoiding collision between vehicle and animal.
+
+
+\chapter{Brief Overview and Advantages of HOG and Cascade Classifier}
+\item A histogram of oriented gradients (HOG) is used in computer vision applications for detecting objects in a video or image, which by definition is a feature descriptor.
+\item First the input image is given to color normalization block. Color normalization is used for object recognition on color images when it is important to remove all intensity values from the picture while preserving color values. After color normalization, the second step of calculation is the computation of the gradient values. The most common method is to apply the 1D centered point discrete derivative mask in both the horizontal and vertical directions. Specifically, this method requires filtering the grey scale image with the following filter kernels:
+
+\begin{equation*} D_{X}=[-1\quad 0\quad 1]\quad \text {and}\quad D_{Y}=\left [{\begin{array}{c} 1\\ 0\\ -1 \end{array}}\right ] \end{equation*}
+
+\item So, given an image I, we obtain the x and y derivatives using a convolution operation: 
+\newline
+\text{I}_{\mathrm {X}} = \text {I} ^\ast \text {D}_{\mathrm {X}}
+\newline
+\text{I}_{\mathrm {Y}} = \text {I} ^\ast \text {D}_{\mathrm {Y}}
+
+\item The magnitude of the gradient is given by
+\textbf{$\ |G|$= $\sqrt{I^{2}_{X}+I^{2}_{Y}}$},
+\newline and orientation of the gradient is given by \textbf{$\theta$=arctan (IY/IX).}
+\item The next step of calculation involves creating the cell histograms. Each pixel within the cell casts a weighted vote for an orientation-based histogram channel based on the values found in the gradient computation. 
+\newpage The cells themselves are rectangular, and the histogram channels are evenly spread over 0 to 180 degrees or 0 to 360 degrees, depending on whether the gradient is “unsigned” or “signed”. As for the vote weight, pixel contribution can be the gradient magnitude itself, or the square root or square of the gradient magnitude.
+
+\item To account for changes in illumination and contrast, the gradient strengths must be locally normalized, which requires grouping the cells together into larger, spatially-connected blocks which are the next step. The HOG descriptor is then the vector of the components of the normalized cell histograms from all of the block regions. These blocks typically overlap, meaning that each cell contributes more than once to the final descriptor.
+
+\item Two main block geometries exist: rectangular R-HOG blocks and circular C-HOG blocks. R-HOG blocks are square grids, represented by three parameters: the number of cells per block, the number of pixels per cell, and the number of channels per cell histogram. There are different methods for block normalization. Let v be the non-normalized vector containing all histograms in a given block, \[||vk||\] be its k-norm for k = 1, 2 and e be some small constant (whose value will not influence the results). Then the normalization factor can be one of the following:
+
+\begin{align*} \text {L2-norm:}~f=&\frac {v}{\sqrt {\Vert v\Vert ^{2}_{2}+e^{2}}} \\ \text {L1-norm:}~f=&\frac {v}{\Vert v\Vert _{1}+e} \\ \text {L1-sqrt:}~f=&\sqrt {\frac {v}{\Vert v\Vert _{1}+e}} \end{align*}
+
+Finally, the image goes to cascade classifier for classification of the object. HOG descriptor is mainly suitable for animal detection in video or images due to some key advantages compared to other descriptors. First, it operates on local cells, so it is invariant to geometric and photometric transformations. Secondly, coarse (spatial) sampling, fine orientation sampling, and strong local photometric normalization allow different body movement of animals to be overlooked if they maintain a roughly upright position.
+
+Cascading is a concatenation of various classifiers (group based learning). The technique involves taking all the data collected from the output of the first classifier as a supplementary data for the next classifier in the group [33]. The key advantages of boosted cascade classifiers over monolithic classifiers are that it is a fast learner and requires low computation time. Cascading also eliminates candidates (false positives) early on, so later stages don’t bother about them.
+
+\item Each filter rejects non-object windows and let object windows pass to the next layer of the cascade. A window is considered as an object if and only of all layers of the cascade classifies it as object [33]. The filter i of the cascade is designed to
+
+\item 1) Reject the possibly large number of non-object windows.
+
+\item 2)To allow possible large number of object windows for quick evaluation.
+\newline
+\newline
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/6.png}
+		\vspace{.1 cm}
+		\caption[Hog Algorithm]{Hog Algorithm}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/7.jpeg}
+		\vspace{.1 cm}
+		\caption [Block Normalisation scheme of HOG]{Block Normalisation scheme of HOG}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.8]{images/8.png}
+		\vspace{.5cm}
+		\caption [Block Normalisation scheme of HOG]{Block Normalisation scheme of HOG}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/9.jpeg}
+		\caption [Architecture of animal detection and collision avoidance]{Architecture of animal detection and collision avoidance}
+	\end{center}
+\end{figure}
+
+
+\chapter{Research Methodology}
+\item The video is taken from a forward-facing optical sensor (camera) in which a moving animal is present apart from other stationary and non-stationary objects. This video is stored in the computer and converted into different frames. Then we are doing pre-processing steps to enhance the image. For feature extraction and learning of the system, they are using a combination of HOG and boosted cascade classifier for animal detection. All the image processing techniques are implemented in OpenCV software. Once the animal gets detected in the video, the next step is to find the distance of the animal from the testing vehicle and then alert the driver so that he can apply the brakes or perform any other necessary action which is displayed on command prompt as a message. Depending on the distance of the animal from the camera mounted vehicle, three kinds of messages (indication) are given to the driver i.e. animal very near, if animal is very near to the vehicle, animal little far, if the animal is little far from the vehicle and very far, if the animal is very far and at a safe distance from the vehicle.
+
+\newline
+\newline
+\chapter{Procedure for Training and Testing}
+\item India has more than 20 varieties of cow found in different states of India such as Gir, Sahiwal, Red Sindhi, Sahiwal, Kankrej, Dandi, and others. We have collected and added all the varieties of a cow in the database for training the system. Following is the proposed procedure for training and testing of the data for animal detection:
+
+\item 1) Collect all positive and negative images in the data folder.
+
+\item 2) Generate Annotation
+
+\item 3) Create sample i.e. generate .vec file
+
+\item 4) Train data and generating XML file. Table 1 shows the parameters used set during training of the system
+
+\item 5) Testing
+
+\item The average time it took to generate a cascade on Intel(R) Core(TM) i5-2430M CPU 2.40GHz, 4GB RAM was almost 14 hours.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/10.jpeg}
+		\caption [Positive Samples]{Positive Samples}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/11.jpeg}
+		\caption [Negative Samples]{Negative Samples}
+	\end{center}
+\end{figure}
+
+
+\chapter{Distance Calculation of the Detected Animal}
+\item The video is taken and converted into frames (image of size 640x480 ). Following is the procedure for calculating the distance of the detected animal from the camera-mounted vehicle:
+
+\item Image resolution is 640x480
+
+X range is 0 to 640
+
+Y range is 0 to 480
+
+Let the right bottom coordinate of the detected cow be (x, y). Then the distance of cow from the lower edge (car/camera) is 480 – y.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=1.2]{images/13.png}.
+		\caption [Distance Calculation]{Distance Calculation}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.5]{images/14.jpeg}
+		\caption [Same object kept at different positions(depth) from camera center]{Same object kept at different positions(depth) from camera center}
+		\vspace{.5cm}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.5]{images/12.jpg}
+		\caption [Positive Samples]{Positive Samples}
+	\end{center}
+\end{figure}
+
+\chapter{Conversion From Pixels to Meters}
+\item There is some relationship between the depth of the object in pixel and depth in real world units (meters) from the camera mounted vehicle once the object (animal) gets detected in the frame. As the depth of the object in meters from the camera mounted vehicle increases (size of the object decreases), the depth in pixels also increases and vice versa. This hinted to find a relationship between the depth of the object in pixels and meters. Once the camera position in the car and height of the camera from the ground was fixed (camera calibration done), they took different images of the same object kept at various depths from the camera centre. The depth of the object from the camera centre in meters was known to us.
+\item It can be noted the corresponding depth of the object in pixels. Table shown represents the relation between pixels and meters. Graph of depth in meters versus depth in pixels was plotted in Excel  and the best fitting second order polynomial equation is
+\newline\item \textbf \{y=0.0323x2+22.208x+1.3132(1)\}
+\newline \item where y is the depth in pixels and x is depth in meters.
+\newline
+\newline
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=1.4]{images/15.png}
+		\vspace{.1 cm}
+		\caption[Relationship between pixels and meters]{Relationship between pixels and meters}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=1.1]{images/16.png}
+		\vspace{.1 cm}
+		\caption[Graph of depth(meters) versus depth(pixels)]{Graph of depth(meters) versus depth(pixels)}
+	\end{center}
+\end{figure}
+
+
+\chapter{Testing of Actual Distance Versus Calculated Distance}
+\item They took two images of a cow in which we knew the depth of the cow in meters from the camera-mounted vehicle(Fig 10.3). Then they calculated the depth using the technique as mentioned earlier. Table shows the results of actual depth and calculated depth. The error is very less (less than 2 percent).
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=1.2]{images/17.jpeg}
+		\vspace{.1 cm}
+		\caption[Testing images(depth in meters already known)]{Testing images(depth in meters already known)}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.5]{images/18.jpg}
+		\vspace{.1 cm}
+		\caption[Actual depth versus Calculated depth]{Actual depth versus Calculated depth}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=1.2]{images/19.jpeg}
+		\vspace{.1 cm}
+		\caption[Camera mounted vehicle]{Camera mounted vehicle}
+	\end{center}
+\end{figure}
+
+\chapter{Experiments and Result Analysis}
+\item Using HOG descriptors which are feature descriptors that are used in computer vision and image processing for the purpose of object detection. For object classification,they are using boosted cascade classifiers. A good source for the animal images is the KTH dataset and NEC dataset that included pictures of cows and other animals. Some more animal images have been clicked (during different weather conditions i.e. morning, afternoon and evening) for creating a robust database of almost 2200 images consisting of positive images in which the target animal is present and negative images in which there is no target animal for feature extraction and for training the classifier. After the classifier is trained and the detection system is built, they tested the same on various videos.
+
+Videos have been taken using a camera having a frame rate of 30fps mounted on the testing vehicle. Hardware used in our experiment is ASUS x53s, Intel(R) Core(TM) i5-2430M CPU 2.40GHz, 4GB RAM. Software used is MicrosoftVisual Studio 10 Professional, OpenCV 2.4.3, 64 bit operating running under Windows 7.
+
+Parameters which are necessary for checking the performance of the test/classifier are Sensitivity (True Positive Rate), Specificity (True Negative Rate) and Accuracy which are given as:
+\newline \textbf {\[Sensitivity=TP/(TP + FN)\] } 
+\textbf{\[Specificity=TN/(TN + FP) \]}
+\textbf{\[Accuracy=(TN + TP)/(TN + TP + FN + FP)\] }
+ \item Here in above equations, TN stands for true negative; TP stands for true positive; FN stands for false negative, and FP stands for false positive. True positive (TP) and true negative (TN) are the most relevant and correct parameters of classification. False Positive indicates that the animal is detected in the frame (video) even though the animal is absent in that particular frame at that given location. False Negative (FN) indicates that there is no animal present in the frame (video) even though the animal is present in that particular frame.
+
+In the implemented animal detection system, there were 640 frames in which 105 frames are showing animal detected i.e. rectangular box even though there is no animal present in those frame at those places. So, false positive in this case turns out to be 105 and true negative turns out to be 535. Similarly out of 640 frames, 125 frames are showing no animal detected i.e. no rectangular box even though animals are present in that frame. So false negative turns out to be 125 and true positive turns out to be 515. Substituting the above parameter values in equation (2), (3) and (4), they got sensitivity close to 80.4\%, specificity close to 83.5\% and accuracy of the classifier close to 82.5\%.
+
+Figure 11.3 shows the on-board camera with the processing and display system inside the car on the dashboard side. They performed extensive experiments and spent so many hours testing the system in different weather conditions on the road. Figure 12.1 shows the true positive scenario wherein in the video, animal (cow) is present and our proposed system correctly detects it and gives an indication (box). Similarly, Figure 12.2  shows a false positive case wherein animal (cow) is detected in the video by the system even though it is absent in that particular frame at that given location. Figure 12.3 shows a false negative case wherein though the animal (cow) is present in the video; Figure 12.4  shows animal detected in the morning condition with the experimental camera mounted vehicle stationary i.e. at 0 kmph speed. Figure 12.5 shows animal detected in the evening state at a distance of 11 meters from the camera mounted testing vehicle with the vehicle moving at a speed of 60 kmph. Figure 12.6 shows multiple animals detected in one of the testing videos at a distance of 17 meters from the camera mounted vehicle. Training and testing on large data sets will improve the detection rate and accuracy of the classifier.
+
+The average processing (computation) time with the proposed image processing method is 100ms (10 frames per second) which can be still be shortened using Nvidia’s CUDA processor. According to an article, the term response time or brain reaction time of the drivers in traffic engineering literature is composed of mental processing time, movement time and mechanical response time. As per the “two-second rule” which is usually a rule of thumb suggests that a driver should ideally stay at least two seconds behind any object that is in front of the driver’s vehicle. The two-second rule is useful as it can be applied to any speed and provides a simple and common-sense way of improving road safety. So if we go with “two-second rule”, clearly from Table (speed-distance relation as well as actual time (onboard) available for the driver to responds), it indicates that when the speed of the vehicle is between 30 to 35 kmph, the driver gets some time to apply brakes and can avoid a collision. Anything above this speed, though the alert signal is available the driver won’t be able to avoid a collision.
+\newline
+\newline
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/20.jpeg}
+		\vspace{.1 cm}
+		\caption[True positive case]{True positive case}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/21.jpeg}
+		\vspace{.1 cm}
+		\caption[False positive case]{False positive case}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/22.jpeg}
+		\vspace{.1 cm}
+		\caption[False negative case]{False negative case}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/23.jpeg}
+		\vspace{.1 cm}
+		\caption[Animal detection at 0Kmph speed(morning condition)]{Animal detection at 0Kmph speed(morning condition)}
+	\end{center}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/25.jpeg}
+		\vspace{.1 cm}
+		\caption[Animal detected at distance of 11kmph in the evening with speed of 60Kmph]{Animal detected at distance of 11kmph in the evening with speed of 60Kmph}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.7]{images/26.jpeg}
+		\vspace{.1 cm}
+		\caption[Multiple animals detected in one of the testing video]{Multiple animals detected in one of the testing video}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=.4]{images/30.jpg}
+		\vspace{.1 cm}
+		\caption[Speed-distance relation]{Speed-distance relation}
+	\end{center}
+\end{figure}
+
+\chapter{Achievements with Respect to Objectives}
+\item 1) Algorithm developed is working properly and able to detect an animal in different conditions on roads and highways.
+
+\item 2) Estimation of animal distance from the testing vehicle is done. Maximum detecting distance of the animal from the camera mounted vehicle was found to be 20 meters.
+
+\item 3) Speed analysis (different speeds like 20, 30, 35, 40, 50, 60 kmph) is implemented and tested.
+
+\item 4) Alert signal to the driver is available.
+
+\chapter{Limitations and Future Scope}
+\item Though the proposed system can detect the animals (cow) on roads and highways as well as gives alert to the driver, it has some limitations too. The proposed system can detect animal up to a distance of 20 meters only when a vehicle is stationary. The system can prevent collision of the vehicle with the animal when driving at a speed in between 30 to 35 kmph. Beyond this speed, though animal gets detected time is not sufficient to prevent animal-vehicle collision.
+
+\item Some means or method of increasing the detecting distance of the animal from the camera mounted vehicle needs to be done so that driver gets sufficient time for applying brakes or take any other action for preventing the collision which may be solved using high-end resolution cameras or radar. No effort has been made to detect animals during the night, which is expected to be done in the future scope of study and research.
+
+\chapter{Conclusion}
+An efficient automatic animal detection and warning system can help drivers in reducing the number of collisions occurring between the animal and the vehicle on roads and highways. In this paper, they discussed the necessity of automatic animal detection system and the algorithm for animal detection based on HOG and cascade classifier. The algorithm can detect an animal in different conditions on highways. The proposed system achieves an accuracy of almost 82.5\% regarding animal (cow) detection. Estimation of approximate animal distance from the testing vehicle is also done. Though the proposed work has been focused on automatic animal detection in context to Indian highways, it will work in other countries also. The proposed method can easily be extended for detection of other animals too after proper training and testing. The proposed system can be used with other available, efficient pedestrian and vehicle detection systems and can be offered as a complete solution (package) for preventing collisions and loss of human life on highways..
+
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{9}
+\bibitem{item1}
+{\fontsize{13pt}{8.4pt}\selectfont \textit{NHTSA\ 2020  Report},\ \ accessed\ \ on\ \ Sep.\  8,  2015.  [Online].  Available: \href{http://www.nhtsa.gov/nhtsa/whatis/planning/2020Report/}{http://www.nhtsa.gov/nhtsa/whatis/planning/2020Report/} 2020report.html\par}\par
+
+\bibitem{item2}
+{\fontsize{13pt}{8.4pt}\selectfont \textit{Global Status Report on Road Safety 2013. Executive Summary}, World Health Org., Geneva, Switzerland, Oct. 2013.\par}\par
+
+\bibitem{item3}
+{\fontsize{13pt}{8.4pt}\selectfont C. J. L. Murray and A. D. Lopez, ‘‘Alternative projections of mortality and disability by cause 1990–2020: Global burden of disease study,’’ \textit{Lancet}, vol. 349, pp. 1498–1504, May 1997.\par}\par
+
+\bibitem{item4}
+{\fontsize{13pt}{8.4pt}\selectfont \textit{Ministry of Home Affairs. Accidental Deaths $\&$  Suicides in India 2012}, Nat. Crime Records Bureau, New Delhi, India, Jun. 2013.\par}\par
+
+\bibitem{item5}
+{\fontsize{13pt}{8.4pt}\selectfont National\ Highways\ Authority of  India.  \textit{Information\ \ About  Indian\  Road Network}, accessed on Jun. 3, 2010. [Online]. Available: \href{http://www.nhai.org/roadnetwork.htm}{http://www.nhai.org/roadnetwork.htm}\par}\par
+
+\bibitem{item6}
+{\fontsize{13pt}{8.4pt}\selectfont J. Padmanaban, R. Rajaraman, G. Stadter, S. Narayan, and B. Ramesh, ‘‘Analysis of in-depth crash data on indian national highways and impact of road design on crashes and injury severity,’’ in \textit{Proc. 4th Int. Conf. ESAR ‘Expert Symp. Accident Res.’},\  Hanover,\ \ Germany,\  Sep.  2010, pp. 170–183.\par}\par
+
+\bibitem{item7}
+{\fontsize{13pt}{8.4pt}\selectfont \textit{Ministry of Home Affairs. Accidental Deaths $\&$  Suicides in India 2006}, Nat. Crime Records Bureau, New Delhi, India, Jun. 2007.\par}\par
+
+\bibitem{item8}
+{\fontsize{13pt}{8.4pt}\selectfont \textit{Accident Research Study on the Ahmedabad–Gandhinagar Highway for the Duration February 2014 to January 2015}, JP Res. India Pvt Ltd., Mar. 2015.\par}\par
+
+\bibitem{item9}
+{\fontsize{13pt}{8.4pt}\selectfont S. Sharma and D. J. Shah, ‘‘A brief overview on different animal detec- tion method,’’ \textit{Signal Image Process., Int. J.}, vol. 4, no. 3, pp. 77–81, Jun. 2013.\par}\par
+
+\bibitem{item10}
+{\fontsize{13pt}{8.4pt}\selectfont M. Fabre-Thorpe, A. Delorme, C. Marlot, and S. Thorpe, ‘‘A limit to the speed of processing in ultra-rapid visual categorization of novel natural scenes,’’ \textit{J. Cognit. Neurosci.}, vol. 13, no. 2, pp. 171–180, Mar. 2001.\par}\par
+
+\bibitem{item11}
+{\fontsize{13pt}{8.4pt}\selectfont T. Burghardt and J. Calic, ‘‘Analysing animal behaviour in wildlife videos using face detection and tracking,’’ \textit{IEE Proc.-Vis., Image Signal Process.}, vol. 153, no. 8, pp. 305–312, Jun. 2006.\par}\par
+
+\bibitem{item12}
+{\fontsize{13pt}{8.4pt}\selectfont D. Walther, D. Edgington, and C. Koch, ‘‘Detection and tracking of objects in underwater video,’’ in \textit{Proc. IEEE Comput. Soc. Conf. Comput. Vis. Pattern Recognit. (CVPR)}, Washington, DC, USA, Jun./Jul. 2004, pp. 544–549.\par}\par
+
+\bibitem{item13}
+{\fontsize{13pt}{8.4pt}\selectfont J. C. Nascimento and J. S. Marques, ‘‘Performance evaluation of object detection algorithms for video surveillance,’’ \textit{IEEE Trans. Multimedia}, vol. 8, no. 4, pp. 761–774, Aug. 2006.\par}\par
+
+\bibitem{item14}
+{\fontsize{13pt}{8.4pt}\selectfont N. Kawasaki, ‘‘Parametric study of thermal and chemical non equilibrium nozzle flow,’’ M.S. thesis, Dept. Electron. Eng., Osaka Univ., Osaka, Japan, 1993.\par}\par
+
+\bibitem{item15}
+{\fontsize{13pt}{8.4pt}\selectfont S. L. Hannuna, N. W. Campbell, and D. P. Gibson, ‘‘Identifying quadruped gait in wildlife video,’’ in \textit{Proc. IEEE Int. Conf. Image Pro- cess. (ICIP)}, Genoa, Italy, Sep. 2005, pp. 713–716.\par}\par
+
+\bibitem{item16}
+{\fontsize{13pt}{8.4pt}\selectfont D. P. Gibson, N. W. Campbell, and B. T. Thomas, ‘‘Quadruped gait analysis using sparse motion information,’’ in \textit{Proc. Int. Conf. Image Process. (ICIP)}, New York, NY, USA, Sep. 2003, pp. 333–336.\par}\par
+
+\bibitem{item17}
+{\fontsize{13pt}{8.4pt}\selectfont H. Ragheb, S. Velastin, P. Remagnino, and T. Ellis, ‘‘Human action recognition using robust power spectrum features,’’ in \textit{Proc. 15th Int. Conf.\ Image Process.  (ICIPO)},\ \ San\ \ Diego,\ \ CA,  USA,  Oct.  2008,\  pp. 753–756.\par}\par
+
+\bibitem{item18}
+{\fontsize{13pt}{8.4pt}\selectfont F. A. Wichmann, J. Drewes, P. Rosas, and K. R. Gegenfurtner, ‘‘Animal detection in natural scenes: Critical features revisited,’’ \textit{J. Vis.}, vol. 10, no. 6, pp. 1–27, 2010.\par}\par
+
+\bibitem{item19}
+{\fontsize{13pt}{8.4pt}\selectfont P. Viola and M. J. Jones, ‘‘Robust real-time face detection,’’ \textit{Int. J. Comput. Vis.}, vol. 57, no. 2, pp. 137–154, 2004.\par}\par
+
+\bibitem{item20}
+{\fontsize{13pt}{8.4pt}\selectfont D. Ramanan, D. A. Forsyth, and K. Barnard, ‘‘Building models of animals from video,’’\  \textit{IEEE Trans. Pattern Anal. Mach. Intell.}, vol. 28, no. 8,\ \  pp. 1319–1334, Aug. 2006.\par}\par
+
+\bibitem{item21}
+{\fontsize{13pt}{8.4pt}\selectfont M. S. Zahrani, K. Ragab, and A. U. Haque, ‘‘Design of GPS-based system to avoid camel-vehicle collisions: A review,’’ \textit{Asian J. Appl. Sci.}, vol. 4, no. 4, pp. 362–377, 2011.\par}\par
+
+\bibitem{item22}
+{\fontsize{13pt}{8.4pt}\selectfont S. Shaikh, M. Jadhav, N. Nehe, and U. Verma, ‘‘Automatic animal detection and warning system,’’ \textit{Int. J. Adv. Found. Res. Comput.}, vol. 2, pp. 405–410, Jan. 2015.\par}\par
+
+\bibitem{item23}
+{\fontsize{13pt}{8.4pt}\selectfont V. Mitra, C.-J. Wang, and G. Edwards, ‘‘Neural network for LIDAR detection of fish,’’\  in \textit{Proc. Neural Netw.\  Int. Joint Conf.}, Jul. 2003,\ \ \  pp. 1001–1006.\par}\par
+
+\bibitem{item24}
+{\fontsize{13pt}{8.4pt}\selectfont S. Sharma and D. Shah, ‘‘Real-Time automatic obstacle detection and alert system for driver assistance on Indian roads,’’ \textit{Indonesian J. Elect. Eng. Comput. Sci.}, vol. 1, no. 3, pp. 635–646, Mar. 2016.\par}\par
+
+\bibitem{item25}
+{\fontsize{13pt}{8.4pt}\selectfont M. Zeppelzauer, ‘‘Automated detection of elephants in wildlife video,’’ \textit{EURASIP\ \ J.\  Image  Video\ \  Process.}, vol.\ \ 46,\ \ p.\  46,  Aug.  2013,\ \  doi: 10.1186/1687-5281-2013-46.\par}\par
+\end{thebibliography}
+
+
+\end{document}
