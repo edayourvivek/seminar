@@ -183,10 +183,16 @@ Progressive web apps are an interesting forward look into the future of mobile a
 \clearpage
 \pagenumbering{arabic}
 \chapter{Introduction}
-A progressive web app combines the best experiences of the web and an app. They don't require any installation. The word 'progressive' comes from the relationship that the user builds with the app over time. The app loads quickly, even when the user is on bad networks. It can send relevant push notifications to the user and has an icon on the home screen and loads as top-level, full screen experience.
+The mobile Web is becoming ever more capable of accessing and handling features previously only available in native and cross-platform apps. With the introduction of Progressive Web Apps (PWAs), regular Web sites can to a larger extent than before act, feel and look as any other installed app – so far particularly on an Android- based mobile device. This is enabled through a set of new concepts and requirements, advocated by Google as well-worth implementation efforts. In short, a PWA is any Web site implementing certain specific technical features. Such a Web site can, in PWA-supported browsers, be added to the home-screen of a user’s device and used offline. It looks like a regular app although being run inside a stripped-down Chrome browser, which hides all its interface artefacts.
+\newline
 
-\item Google states: “A Progressive Web App uses modern web capabilities to deliver an app-like user experience.” When you will get to know PWA, app development will seem not required. The mobile website itself becomes the application.So, investing in Web Technologies is an omen because it is trying to overcome the major problem possessed by mobile apps: Platform Fragmentation.
-\item The mobile web is based on web apps conforming to
+
+\item 
+Google states: “A Progressive Web App uses modern web capabilities to deliver an app-like user experience.” When you will get to know PWA, app development will seem not required. The mobile website itself becomes the application.So, investing in Web Technologies is an omen because it is trying to overcome the major problem possessed by mobile apps: Platform Fragmentation.
+\newline
+\item
+
+The mobile web is based on web apps conforming to
 standard languages like HTML5, CSS3, and JavaScript, which offer (among many) the advantage of full application portabil-
 ity across platforms (e.g. Android, Apple). Even if the browser is becoming more and more a fully-fledged software platform
 (e.g. the HTML5 standard provides APIs for geolocation,
@@ -202,11 +208,12 @@ the lack of support for push notifications, and so on.
 \newline
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[scale=.7]{images/1.jpg}
+		\includegraphics[scale=.7]{im1.png}
 		\vspace{.1 cm}
-    \caption[Influences on road traffic accidents]{Influences on road traffic accidents}
+    \caption{App and Mobile web usage}
 	\end{center}
 \end{figure}
+\item The Web reaches wider audiences than apps. But apps dominate in time spent. So there is need of something that combines the best experiences of the web and the app. A new architecture is coming that will help to combine the best experiences of the web and the app and may finally provide the solution to building apps and websites that are fast and reliable. With Progressive Web Apps, Google has seen engagement levels of websites approach nearly that of native apps.In a nut shell, progressive Web apps start out as tabs in Chrome and become progressively more “app” like the more people use them, to the point where they can be pinned on the home screen of a phone or in the app drawer and have access to app-like properties such as notifications and offline use. Progressive Web apps are linkable with an URL, fully responsive and secure.
 
 
 \begin{enumerate}
@@ -214,80 +221,62 @@ the lack of support for push notifications, and so on.
 
 
 
-\chapter{Literature Survey}
-\item   According to the report given by the Society for Prevention of Cruelty to Animals (SPCA), around 270 cattle had been brought to their hospital-cum-animal-shelter in the year 2013, most of whom were accident victims. 
-
-\item A recent study  shown that human beings have to take the final call while driving whether they can control their car to prevent collision with a response time of 150ms or no. The issue with the above approach is that human eyes get exhausted quickly and need rest, which is why this method is not that effective. Some scientific researchers have proposed a method that requires the animals to take a pose towards the camera for the trigger, including face detection. The problem with this technique is that face detection requires animals to see into the camera which is, not necessarily captured by the road travel video. Animals can arrive from a scene from various directions and in different sizes, poses, and color.
-
-\item Animals can be detected using the knowledge of their motion. The fundamental assumption here is that the default location is static and can simply be subtracted. All blobs, which stay after the operation are measured as the region of interest. Although this technique performs well in controlled areas, e.g. underwater videos, it does not work universally, especially road or highway side videos. Researchers used threshold segmentation approach for getting the targeted animal’s details from the background. Recent researches also revealed that it ’s hard to decide the threshold value as the background changes often. A method applicable to moving backgrounds (e.g., due to camera motion) is presented in subsequent studies. The authors also state that other moving objects apart from the object of interest may be falsely detected as an animal.
-
-\newpage \item Another method for animal detection and tracking that uses texture descriptor based on SIFT and matching it against a predefined library of animal textures is proposed. The problem with this method is that it is restricted to videos having single animal only and very minimal background clutter.
 
  
-\item Authors in designed a system, which uses web cameras which are placed in the detecting areas from where the animal can cross their boundary. The videos are sent to the processing unit and then uses image mining algorithm, which identifies the change in set reference background. If there is a change in the newly acquired image, then authors are applying content-based retrieval algorithm (CBIR) to identify the animal. The proposed method in based on CBIR algorithm suffers from many issues like unsatisfactory querying performance-CBIR systems use distance functions to calculate the dissimilarity between a search image and database images, low-quality recovery results. This approach is very slow and response times in the range of minutes may take place if the database is enormous.To find the accurate location of fishes in the marine, researchers aimed a technique using LIDAR (Light Detection and Ranging)
+
+\chapter{Comparative Study}
+\section{Native Applications:}
  
+\item
+Native applications have codes that are devised specifically for a particular platform, namely Android, iOS and so on. Cross-platform codes are not possible with native apps as the codes written for one platform cannot be used in another. You may use the latest APIs, but you cannot use one platform’s code on another one. A native app would always feel right for the user because it has a mature ecosystem containing all the specific guidelines used for the OS it is developed for; ranging from swipes, app defines gestures to centrally aligned headers for iOS and left aligned headers for Android. This makes it easier for the user.
+\section{Web Apps:}
+\item 
+Mobile web applications require web browsers to function and they are developed using HTML ,CSS and JavaScript. The program will be stored on a remote server and shows itself when the user asks for it. It is not necessary for web apps to have native codes and they can function on any operating system.
+\section{Hybrid Apps:}
+\item When smartphones were first released into the market, the war between native and web applications took shape and form, but along with the spoils of the war, another category was created – hybrid apps. If you want to get an app out the door as soon as possible and save time and money on developing the app, then you need hybrid apps. Hybrid app development is cross-platform app development and only one source code is used; this would be upgraded and updated to suit the purpose. Thus it combines the benefits of both native apps and web apps.
+\section{Comparative factors:}
+\subsection{Code Portability:}
+\item
+You can not port native apps from one platform to another. With web apps, you can have a single code base for any major mobile platform. This is not 100 percent portable and sometimes developers are faced with portability issues. For hybrid apps, you can reuse many of the apps from one platform to another.
+\subsection{Local Storage, Offline Capability:}
+Offline apps would function even when your user is not online. There is no need for the internet connection to beconstant. Local storage that retains web app data is possible with web apps, and thus it would be ideal to use web apps if you are looking for offline storage of 5MB at a time. With hybrid apps, users cannot enjoy the offline mode as much as they would want. With native apps, it would be possible for users to enjoy the capabilities of offline capability.
+\subsection{Monetization:}
+Every app developer seeks to come up with a ground- breaking concept when they release their app to the app store. They all expect it to bring in phenomenal success in terms of money. The possibility of monetization with native and hybrid apps would be much higher compared to web apps. The downside for native and hybrid apps is that the app store takes a percentage of all sales that you make. Whereas, for web apps, there are no commissions.
+\subsection{Cost:}
+Native apps often cost more to develop because they ask for specific language and tooling ecosystems, apart from the customization of code. Cost is often dependant on a number of factors and sometimes even the skill of a developer which could cost more. Web app’s functionality is based on JavaScript, CSS and HTML5. Hybrid apps are least expensive of all three.
+\subsection{Time to Market Apps:}
+App store is quite strict about the apps sold in their store and things get stricter for in app purchases. You have to submit an application and sometimes, wait for months to get their approval. The time to market for web apps is much smoother and simpler, whereas for the other two, you will have to wait.
+\subsection{User Experience and Interaction:}
+Native app provides much better accessibility features when in a native UI. You have absolute control here. Unfortunately, web apps are hindered by the capability of a web browser. For native apps, you can actually accelerate the UI performance when you enhance the capabilities of the device hardware.
+\subsection{Internationalization & Localization:}
+Every app development company dreams of surpassing geographical boundaries and creating software that people from anywhere can access. Internationalization & Localization for hybrid, native and web apps is excellent because the software can be designed in such a way that they can be adapted to any language without making engineering changes. These softwares can be localized by making it applicable for a particular region or language.
 
-\chapter{Research Gap and Challenges}
- 
-\item Though various practical solutions for automatic lane detection and pedestrian detection on highways are available still research related to automatic animal detection on highways is going on.
-
-\item Animal detection in wildlife (forest) videos or underwater videos (controlled areas) have been tried in past but the challenges are much more when detecting animals on highways (uncontrolled areas) as both animal as well as a camera mounted vehicle is moving apart from other obstacles on the road which are also moving or stationary. There is no issue of speed (vehicle speed as well as animal speed) and detecting distance of animal from the vehicle in wildlife videos which is crucial and critical in animal detection on highways.
-
-\item The biggest challenge in detecting animals compared to pedestrians or other objects is that animals come in various size, shape, pose, color and their behavior is also not entirely predictable. Though the basic shape and size of a human being are pretty average and standard, the same is not true for animals.
-
-\item Although various methods and approaches have been used and are still in progress to detect, solve and reduce the number of animal-vehicle collisions, the absence of any practical systems related to an animal-vehicle collision on highways has delayed any substantial development in the scenario [24].
-
-\chapter{Different Scenarios and Consequences of Animal-Vehicle Collision on Highway}
-\item Animal-vehicle collision can be classified using two ways:
-\newline 1) Direct collision
-\newline 2) Indirect collision
-
-\item \textbf{Direct collision}: It happens when the vehicle directly hits the animal. Following cases and outcome may occur depending on the speed of the vehicle and the speed of the incoming or outgoing animal.
-
-\item Vehicle hits the animal and animal gets thrown to the side. This scenario may be less critical, but damages will be there. Figure 4.1 shows the case 1 scenario.
-
-\item Vehicle hits the animal, and the animal jumps/ gets raised in the air and again gets back or falls back on the windshield. This is quite critical and dangerous scenario and can cause the death of the animal or even the driver of the vehicle. Figure 4.2 shows the case 2 scenarios.
-
-\item Vehicle hits the animal and runs over the animal. In this case, a particular injury will occur to the animal. It may also happen that because of the impact of a collision, the vehicle may get overturn which can cause injury to the driver. Figure 4.3 shows the case 3 scenarios.
-\item \textbf{Indirect collision}: In this case, an accident occurs because of animal only but not directly. The driver of one vehicle finds an animal on the highway and tries to change the direction or the lane and collides with the vehicle which is running on the other lane. Figure 4.4 shows the indirect collision scenario.
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=.7]{images/2.jpeg}
-		\vspace{.1 cm}
-		\caption[Case 1 scenario]{Case 1 scenario}
-	\end{center}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=.7]{images/3.jpeg}
-		\vspace{.1 cm}
-		\caption[Case 2 scenario ]{Case 2 scenario}
-	\end{center}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=.7]{images/4.jpeg}
-		\vspace{.1 cm}
-		\caption[Case 3 scenario]{Case 3 scenario}
-	\end{center}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=.7]{images/5.jpeg}
-		\vspace{.1 cm}
-		\caption[Indirect collision]{Indirect collision}
-	\end{center}
-\end{figure}
+\chapter{Progressive web apps}
 
 
-\chapter{Objectives and Scope of Work}
-\item Intelligent highway safety and driver assistance systems are very helpful to reduce the number of accidents that are happening due to vehicle-animal collisions. On Indian roads, two types of animals – the cow and the dog are found more often than other animals on the road. The primary focus of the proposed work is for detection of animals on roads which can have the potential application of preventing an animal-vehicle collision on highways. \item Specific objectives of the research work are:
+\item \textbfA Progressive web app combines the best experiences of the web and an app. They don't require any installation. The word 'progressive' comes from the relationship that the user builds with the app over time. The app loads quickly, even when the user is on bad networks. It can send relevant push notifications to the user and has an icon on the home screen and loads as top-level, full screen experience.
 
-\item 1) To develop a low-cost automatic animal detection system in context to Indian roads.
+\item A progressive web app can be defined as :
 
-\item 2) Finding the approximate distance of animal from the vehicle in which camera is mounted.
+\item\textbf{Reliable -} Load instantly and never show the downasaur, even in uncertain network conditions.
 
-\item 3) To develop an alert system once the animal gets detected on the road which may help the driver in applying brakes or taking other necessary action for avoiding collision between vehicle and animal.
+\item \textbf{Fast -} Respond quickly to user interactions with silky smooth animations and no janky scrolling.
+\item \textbf{Engaging -} Feel like a natural app on the device, with an immersive user experience.
+\chapter{Characteristics}
+\item 
+There are certain characteristics that define PWAs, and that differentiate them from regular Web sites and native or cross-platform mobile apps. The main differentiator between a regular Web site and a PWA is the added functionality and User Experience (UX) the latter provides. Where a regular Web site requires the user to open a browser, type in a URL and wait for all content to be downloaded on every visit, effectively preventing an offline experience, a PWA only requires these steps for the first visit. After a home screen installation, all necessary static files, including HTML, CSS, JavaScript, images and fonts for the Web site, are now stored on the user’s phone, ready to be used offline. All dynamic data can be cached for offline (or low-connectivity) use, and re-fetched when needed, e.g. when new data is available and the phone is on a decent network connection.
+Where a regular Web site would be wrapped in a browser (e.g. Chrome Android) with visible browser artefacts (such as address bar and menus), a PWA will similarly run in a browser instance, but without those artefacts [58]. Thus, a PWA will look similar to a regular app. If a PWA is styled correctly, following the design guidelines of each mobile platform, telling apart a regular native or cross-platform app and a PWA from the appearance would be challenging.
+
+
+\chapter{Core building blocks of Progressive web app}
+\section{Application shell}
+\itemAn Application shell (or app shell) architecture is one way to build a Progressive Web App that reliably and instantly loads on your users' screens, similar to what you see in native applications.
+
+The app "shell" is the minimal HTML, CSS and JavaScript required to power the user interface and when cached offline can ensure instant, reliably good performance to users on repeat visits. This means the application shell is not loaded from the network every time the user visits. Only the necessary content is needed from the network.
+
+For single-page applications with JavaScript-heavy architectures, an application shell is a go-to approach. This approach relies on aggressively caching the shell (using a service worker) to get the application running. Next, the dynamic content loads for each page using JavaScript. An app shell is useful for getting some initial HTML to the screen fast without a network.
+
+
 
 
 \chapter{Brief Overview and Advantages of HOG and Cascade Classifier}
