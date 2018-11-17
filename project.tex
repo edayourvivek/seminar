@@ -1,0 +1,193 @@
+\documentclass[12pt,a4paper,final]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=3cm,right=2cm,top=1cm,bottom=2.5cm]{geometry}
+\linespread{1.2}
+\usepackage{titlesec}
+\usepackage[yyyymmdd]{datetime}
+%to remove the dots for the content page.
+\makeatletter
+\renewcommand{\@dotsep}{10000} 
+\makeatother
+\makeatletter 
+%\renewcommand{\thefigure}{\@arabic\c@figure}
+\makeatother
+
+%....................................
+%....................................
+%change this portion in ur tex file. copy this and paste there.
+%....................................
+%....................................
+
+\titleformat{\chapter}[display]
+{\rmfamily\huge\bfseries\centering}
+{}{15pt}{\huge}
+
+%\titleformat{\chapter}[display]{\bfseries\centering}{\huge}{ }{\Huge #1}
+ 
+%\titlespacing{\chapter}{0pc}{0pc}{.5pc}
+%\titlespacing{<command>}{<left>}{<before-sep>}{<aft
+
+\titlespacing{\section}{0pc}{.5pc}{0pc}
+\titlespacing{\subsection}{0pc}{1pc}{0pc}
+
+
+%........................................
+%........................................
+%thank u
+%........................................
+%........................................
+
+
+\author{{\emph{by}}\\
+\textbf{BINCY BABU }\\
+\textbf{CHANDANA K }\\
+\textbf{VARSHA M }\\
+\textbf{VIMAL KUMAR }\\[3pt]
+ }
+\title{{\textbf{VIGILATE}} \\[6pt]
+	{\textbf{PROJECT REPORT}}\\[.8cm]
+	\\
+		{\large \textit{(Submitted in Partial Fulfillment of the Requirement for B.Tech Degree Course in Computer Science and Engineering under APJ Abdul Kalam Technological University)\\[.2 cm]}}
+		}
+\date{
+\textit{under the guidance of} \\[0.1cm]
+	\textbf{ Mr. Sudhesh K M} \\
+	\textbf{Assistant Professor}\\
+	\vspace{.3cm}
+\begin{figure}[h]
+	\begin{center}
+\includegraphics[scale=.5]{images.png}
+\end{center}
+\end{figure}
+\large\textbf{Department of Computer Science and Engineering} \\
+\textbf{Ammini College of Engineering, Post Mankara, Palakkad-678713,\\ 2018-2019}
+}	
+\thispagestyle{empty}
+
+\begin{document}
+\pagenumbering{gobble}
+\clearpage\maketitle
+\thispagestyle{empty}
+
+
+\newline \begin{center}\fontsize{13}{20} \selectfont \textbf{Ammini College of Engineering, Post Mankara, Palakkad-678613}\end{center}
+%\begin{center}\fontsize{14}{17} \selectfont \textbf{PALAKKAD}\end{center}
+\begin{center}\fontsize{17}{17} \selectfont \textbf{Department of Computer Science \& Engineering\\November 2018\\[2cm] }\end{center}
+\begin{figure}[h]
+	\begin{center}
+\includegraphics[scale=.5]{images.png}
+\end{center}
+\end{figure}
+\begin{center}\fontsize{14}{17} \selectfont \textbf{CERTIFICATE}\end{center}
+
+{This is to certify that the Seminar report entitled {\bf{Progressive Web Apps}} is bonafide record of Seminar done by {\bf {VIVEK E, Reg no: AME15CS037}} at Ammini College of Engineering, in partial fulfillment of the requirement for the award of B.Tech Degree course in Computer Science and Engineering of A P J Abdul Kalam Technological University, Year 2015-2019}
+
+\newline
+\newline
+\newline
+\newline
+  \hspace{1cm}Mrs. Happy A\hspace{8.7cm}Mr. Prabhu M
+
+ \\Guide\hspace{9.00cm} Head Of Department \\ 
+\newline
+\newline
+\newline
+
+\newline
+
+\vspace{5cm}
+\newline
+\newline \newline PLACE: PALAKKAD
+
+\thispagestyle{empty}
+
+
+\newpage
+\section*{\begin{center} \fontsize{14}{17} \selectfont \textbf{ACKNOWLEDGEMENT}\end{center}}
+\thispagestyle{empty}
+%\vspace{1cm}
+
+%\vspace{.4 cm }
+%\begin{quote}
+                                                 
+	\hspace{01.5cm}
+		    I wish to express my deep sense of gratitude to our beloved Chairman \textbf{Sri. K.G Madhu} and all trust members of Ammini College of Engineering for providing all the necessary facilities to carry out the seminar work. I express my sincere thanks to our Principal \textbf{Dr. Suresh Kumar V} for his support. I express my gratitude to \textbf{Mr. Prabhu M}, Head of the Department, Department of Computer Science and Engineering for his/her encouragement and timely advice that made me to carry out the seminar work successfully. I would like to express my sincere appreciation to my guide,\textbf{Mrs. Happy A}, Assistant Professor, Department of Computer Science and Engineering for the support and guidance he/she has extended to me in the completion of my seminar work. I extend my sincere thanks to the faculty and staff members for their valuable suggestions and help throughout my seminar work. Besides these, i like to express my sincere thanks to my friends and family for their help and support towards the successful completion of the seminar work.
+\newline
+\newline 
+
+%\end{quote}
+
+
+\thispagestyle{empty}
+
+\newpage
+\textbf{
+\begin{center}
+\Large{ABSTRACT}
+\thispagestyle{empty}
+\end{center}}
+
+%text here...........
+
+
+\tableofcontents % compile 2 times to get table of contents written
+\addtocontents{toc}{\small}
+
+
+\listoffigures  %compile 2 times to get list of figures written
+\addtocontents{lof}{\small}
+
+
+\clearpage
+\pagenumbering{arabic}
+
+%references(bibliography)
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{9}
+\bibitem{paper1}
+Vivek Balachandran, Sabu Emmanuel,  \lq\lq Potent and Stealthy Control Flow Obfuscation by Stack Based Self-Modifying Code \rq\rq, \textit {Information Forensics and
+Security, IEEE Transactions on,} vol. 8, no. 4, pp. 669-681, 2013
+ 
+\bibitem{paper2} A. Adamov, A. Saprykin, \lq\lq The problem of trojan inclusions in
+software and hardware\rq\rq, in \textit{ Proc. Design and Test Symp.,} 2010, pp.
+449–451.
+ 
+\bibitem{paper3}J. M. Memon, Shams-ul-Arfeen, A. Mughal, F. Memon, \lq\lq Preventing reverse engineering threat in Java using byte code obfuscation techniques\rq\rq, in \textit {Proc. Int. Conf. Emerging Technologies,} 2006, pp.
+689–694. 
+\bibitem{paper4} D. Hanchez, \lq\lq A Comparative Study of Software Protection Tools
+Suited for e-Commerce With Contributions to Software Watermarking
+and Smart Cards\rq\rq , Ph.D. Thesis, University of Catholique de Louvain,
+Louvain, Belgium, 2003.
+\bibitem{paper5}M. Sosonkin, G. Naumovich, N. Memon, \lq\lq Obfuscation of design
+intent in object-oriented applications\rq\rq, in \textit {Proc. ACMWorkshop on Digital Rights Management,} 2003, pp. 142–153.
+\bibitem{paper6}R.Parameswaran,D.M.Blough, \lq\lq Privacy preserving collaborative filtering using data obfuscation\rq\rq, \textit {IEEE Granular Comput.,} pp.380-387,2007.
+\bibitem{paper7}C. Wang, J. Davidson, J. Hill,J. Knight,  \lq\lq Protection of software-based survivability mechanisms\rq\rq, \textit{Depend. Syst. Netw.,} pp. 193–202,
+2001.
+\bibitem{paper8}I. V. Popov, S. K. Debray,G. R. Andrews, \lq\lq Binary obfuscation using signals
+\rq\rq , in \textit {Proc. USENIX Security Symp.,} 2007, pp. 1–16.
+\bibitem{paper9}L. Shan , S. Emmanuel,  \lq\lq Mobile agent protection with self-modifying code
+\rq\rq , \textit {J. Signal Process. Syst., } vol. 65, pp. 105–116, 2010.
+\bibitem{paper10}M. Madou, B. Anckaert, P. Moseley, S. Debray, B. De Sutter, K.De Bosschere,   \lq\lq Software protection through dynamic code mutation
+\rq\rq , \textit {Inf. Security Applicat., } pp. 194–206, 2006.
+\bibitem{paper11}Z.Wu, S. Gianvecchio,M. Xie, H.Wang,    \lq\lq Mimimorphism: A new
+approach to binary code obfuscation
+\rq\rq ,in \textit {Proc. ACM Conf. Computer
+and Communications Security (CCS ’10), } 2010, pp. 536–546.
+\bibitem{paper12}B. Schwarz, S. Debray, G.Andrews,M.Legendre,     \lq\lq PLTO: A link-time optimizer for the Intel IA-32 architecture,
+\rq\rq ,in \textit {Proc. Workshop on
+Binary Translation (WBT-2001),} Barcelona, Catalunya, Spain, 2001.
+\bibitem{paper13}C. Linn , S. Debray,      \lq\lq Obfuscation of executable code to improve resistance to static disassembly
+\rq\rq ,in \textit {Proc. ACM Conf. Computer and
+Communications Security,} 2003, pp. 290–299.
+\end{thebibliography}
+
+
+
+\end{document}
